@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@600&family=Merriweather&family=Shadows+Into+Light&display=swap');
+
+*, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: linear-gradient(315deg, #B620BF 0%, #3521A4 74%);
+  font-family: 'Exo 2', sans-serif;
+  color: whitesmoke;
+}
+
+.App-header {
+  background-size: cover;
+  background-color:white;
+  font-size: calc(5px + 2vmin);
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 1350px;
+  height: 450px;
+  background: white;
+
+  min-height: 80vh;
+  width: 83%;
+  margin: 85px auto 0;
+
+  background: rgba( 255, 255, 255, 0.5 );
+  /* box-shadow:  -5px 5px 10px white,
+             5px -5px 10px whitesmoke; */
+  backdrop-filter: blur( 14.5px );
+  -webkit-backdrop-filter: blur( 14.5px );
+  border-radius: 20px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  /* word-break: break-all; */
+  /* border: 1px solid rgba(0, 0, 0, 0.274); */
+}
+
+.bloc-tabs {
+  display: flex;
+  justify-content: flex-end;
+  padding: 35px 20px 20px 20px;
+}
+.tabs {
+  text-align: right;
+
+  width: 7%;
+  background: rgba( 255, 255, 255, 0 );
+  backdrop-filter: blur( 0px );
+  -webkit-backdrop-filter: blur( 1.5px );
+
+  cursor: pointer;
+  box-sizing: content-box;
+  position: relative;
+  outline: none;
+
+  color: whitesmoke;
+}
+.tabs1 {
+  border-radius: 20px 0px 0px 0px;
+}
+.active-tabs  {
+  color: #0F059A;
+  font-weight: bolder;
+  font-size: medium;
+}
+.active-tabs::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(10% + 2px);
+  height: 5px;
+}
+
+.content-tabs {
+  flex-grow : 1;
+}
+.content {
+  padding: 20px;
+  left: 33%;
+  top: 20%;
+  position: absolute;
+  display: none;
+}
+.content .section3 {
+  display: flex;
+}
+
+.content h2 {
+  padding: 0px 0 5px 0px;
+  font-size:xx-large ;
+  font-weight: bolder;
+}
+.content .section4 h2{
+  margin: 0px 0px 0px 100px;
+} 
+.content p {
+  width: 100%;
+  height: 100%;
+}
+content .section3 p {
+  font-size: smaller;
+}
+.content .section4 p{
+  margin: 0px 0px 0px 30px;
+}
+
+.content input {
+  background: whitesmoke;
+  border: 0;
+  border-radius: 4px;
+
+  outline: none;
+  display: block;
+  
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 500;
+  
+  align-items: center;
+  position: relative; 
+}
+.content .section1 input{
+  padding: 15px 50px;
+  margin: 10px 0px 0px 80px;
+}
+.content .section4 input{
+  padding: 10px 20px;
+  margin: 5px 0px 0px 30px;
+}
+.content input:focus {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.content .section4 form{
+  display: flex;
+}
+
+button {
+  border: none;
+}
+.content button {
+  background-color: #1fd1f9;
+  background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+
+  outline: none;
+  border: 0;
+
+  color: #FFFFFF;
+  font-weight: 500;
+  font-size: smaller;
+  text-transform: uppercase;
+
+  cursor: pointer;
+}
+.content .section1 button {
+  border-radius: 50px;
+  padding: 12px 20px;
+  position: relative;
+  margin: 100px 0px 20px 150px;
+}
+.content .section3 button {
+  border-radius: 15px;
+  padding: 12px 20px;
+  position: relative;
+  margin: 10px 0px 0px 30px;
+  font-size: smaller;
+}
+.content .listSA button{
+  background: rgba( 255, 255, 255, 0.1);
+  color: whitesmoke;
+  font-size: medium;
+  border-radius: 15px;
+  padding: 7px 7px;
+}
+.content .section4 button {
+  border-radius: 10px;
+  padding: 12px 20px;
+  position: relative;
+  margin: 0px 0px 0px 30px;
+  font-size: smaller;
+}
+.content .likebutton button {
+  border-radius: 50px;
+  padding: 12px 20px;
+  position: relative;
+  margin: 0px 0px 20px 150px;
+}
+
+.active-content {
+  display: block;
+}
+
+
+.custom-file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.custom-file-input::before {
+  content: 'Upload Audio File';
+  display: inline-block;
+  background-color: #1fd1f9;
+  background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+  border: 1px solid #999;
+  border-radius: 3px;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  cursor: pointer;
+  color: #FFFFFF;
+  font-weight: 500;
+  font-size: smaller;
+  text-transform: uppercase;
+}
+.custom-file-input:hover::before {
+  border-color: black;
+}
+.custom-file-input:active::before {
+  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
+.content .section2 button{
+  background-color: #1fd1f9;
+  background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+
+  outline: none;
+  border: 0;
+  border-radius: 50px;
+
+  color: #FFFFFF;
+  font-weight: 500;
+  font-size: smaller;
+  text-transform: uppercase;
+
+  cursor: pointer;
+  /* width: 40%; */
+  padding: 12px 20px;
+  position: relative;
+  margin: 100px 0px 20px 220px;
+}
+
+.form-section-2{
+	font-family: 'Open Sans Condensed', arial, sans;
+	width: 400px;
+  opacity: 1;
+	padding: 10px;
+	background: whitesmoke;
+backdrop-filter: blur( 3.5px );
+-webkit-backdrop-filter: blur( 3.5px );
+border-radius: 10px;
+	margin: 0px 0px -80px 0px;
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+	-moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+	-webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
+  border-radius: 15px;
+}
+.form-section-2 .sec2-submit{
+	-moz-box-shadow: inset 0px 1px 0px 0px #45D6D6;
+	-webkit-box-shadow: inset 0px 1px 0px 0px #45D6D6;
+	box-shadow: inset 0px 0px 0px 0px #45D6D6; 
+	background-color: #391670;
+	border: 1px solid #27A0A0;
+	display: inline-block;
+	cursor: pointer;
+	color: #FFFFFF;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 12px;
+	padding: 8px 18px;
+	text-decoration: none;
+	text-transform: uppercase;
+  margin: 0px 0px 20px 115px;
+  border-radius: 5px;
+}
+
+.form-section-2 input[type="text"],
+.form-section-2 textarea,
+.form-section-2 select 
+{
+  color: #000;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	outline: none;
+	display:inline-block;
+	width: 50%;
+	padding: 20px 10px 20px 10px;
+	border: 0px solid #9ea2db;
+	border-bottom: 1px solid #ddd;
+	background:transparent;
+	margin-bottom: 10px;
+	font: 15px Arial, Helvetica, sans-serif;
+  border-radius: 5px;
+	height: 25px;
+}
+.form-section-2 input[type="text"]::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(103, 61, 151);
+  opacity: 1; /* Firefox */
+}
